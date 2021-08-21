@@ -82,37 +82,3 @@ document.getElementById('promo-submit').addEventListener('click', function () {
     settotalCostWithPromo(promoCode.value);
     promoCode.value='';
 })
-
-
-
-
-
-function update(cost)
-{
-    const totalCost=document.getElementById('total-price');
-    totalCost.innerText=parseInt(totalCost.innerText)+cost;
-}
-
-
-////
- function update(cost)
-{
-    const totalCost=document.getElementById('total-price');
-    totalCost.innerText=parseInt(totalCost.innerText)+cost;
-}
-
-////
- storageBtn1.addEventListener('click')
- {
-    update(0);
- }
- storageBtn3.addEventListener('click')
- {
-    update(100);
- }
- 
- storageBtn2.addEventListener('click')
- {
-    update(180);
- }
- 
