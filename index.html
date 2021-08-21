@@ -41,17 +41,17 @@
                     <div class="memory my-5">
                         <h5>Memory</h5>
                         <div class="d-flex">
-                            <button class="btn btn-success me-2">8GB unified memory</button>
-                            <button class="btn btn-success">16GB unified memory</button>
+                            <button id="mem-8gb" class="btn btn-success me-2">8GB unified memory</button>
+                            <button id="mem-16gb" class="btn btn-success">16GB unified memory</button>
                         </div>
                     </div>
 
                     <div class="storage my-5">
                         <h5>Storage</h5>
                         <div class="d-flex">
-                            <button class="btn btn-success me-2">25GB SSD storage</button>
-                            <button class="btn btn-success me-2">512GB SSD storage</button>
-                            <button class="btn btn-success">1TB SSD storage</button>
+                            <button id="strg-25gb" class="btn btn-success me-2">25GB SSD storage</button>
+                            <button id="strg-512gb" class="btn btn-success me-2">512GB SSD storage</button>
+                            <button id="strg-1tb" class="btn btn-success">1TB SSD storage</button>
 
                         </div>
                     </div>
@@ -59,8 +59,8 @@
                     <div class="delivery my-5">
                         <h5>Choose your delivery option</h5>
                         <div class="d-flex">
-                            <button class="btn btn-success me-2">Friday, Aug 25 Free Prime Delivery</button>
-                            <button class="btn btn-success">Friday, Aug 21 Delivery charge $20</button>
+                            <button id="dlv-late" class="btn btn-success me-2">Friday, Aug 25 Free Prime Delivery</button>
+                            <button id="dlv-early" class="btn btn-success">Friday, Aug 21 Delivery charge $20</button>
                         </div>
                     </div>
 
@@ -76,10 +76,10 @@
                             </div>
 
                             <div class="col-md-2">
-                                <h5>$1,299</h5>
-                                <h5>$0</h5>
-                                <h5>$0</h5>
-                                <h5>$0</h5>
+                                <h5>$<span id="base-cost">1299</span></h5>
+                                <h5>$<span id="mem-cost">0</span></h5>
+                                <h5>$<span id="strg-cost">0</span></h5>
+                                <h5>$<span id="dlv-cost">0</span></h5>
 
                             </div>
 
@@ -92,7 +92,7 @@
                             </div>
 
                             <div class="col-md-2">
-                                <h5>$1,299</h5>
+                                <h5>$<span id="total-cost">1,299</span></h5>
                             </div>
 
                         </div>
@@ -100,9 +100,9 @@
                         <div class="col-md-8 promo">
                             <h5>Add Promo code</h5>
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="stevekaku"
+                                <input id="promo-input" type="text" class="form-control" placeholder="stevekaku"
                                     aria-label="Recipient's username" aria-describedby="button-addon2">
-                                <button class="btn btn-danger text-white" type="button"
+                                <button id="promo-submit" class="btn btn-danger text-white" type="button"
                                     id="button-addon2">Apply</button>
                             </div>
                         </div>
@@ -115,7 +115,7 @@
                 </div>
             </div>
 
-            <h1 class="text-center my-5">Total: $1299</h1>
+            <h1 class="text-center my-5">Total: $<span id="total-with-promo">1299</span></h1>
 
         </section>
 
