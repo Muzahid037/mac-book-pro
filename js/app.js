@@ -2,7 +2,7 @@
 const extraMemoryCostFor8gb=0;
 const extraMemoryCostFor16gb=180;
 //storage variable
-const extraStorageCostFor25gb=0;
+const extraStorageCostFor256gb=0;
 const extraStorageCostFor512gb=100;
 const extraStorageCostFor1tb=180;
 //delivery variable
@@ -37,13 +37,14 @@ function getTotalcostWithoutPromo(){
 }
 
 function setTotalCostWithWithoutPromo(){
+
     const totalcostWithoutPromo=getTotalcostWithoutPromo();
     document.getElementById('total-cost').innerText=totalcostWithoutPromo;
     document.getElementById('total-with-promo').innerText=totalcostWithoutPromo;
 }
 
 function setPriceForIndividualField(fieldId,price){
-    const field=document.getElementById(fieldId+'-cost');
+    const field=document.getElementById(fieldId+'-cost');  //'mem-cost'  strg+'-cost == strg-cost
     field.innerText=price;
 
     setTotalCostWithWithoutPromo();
@@ -59,7 +60,7 @@ document.getElementById('mem-16gb').addEventListener('click', function () {
 
 // storage button EventListener 
 document.getElementById('strg-25gb').addEventListener('click', function () {
-    setPriceForIndividualField('strg',extraStorageCostFor25gb);
+    setPriceForIndividualField('strg',extraStorageCostFor256gb);
 })
 document.getElementById('strg-512gb').addEventListener('click', function () {
     setPriceForIndividualField('strg',extraStorageCostFor512gb);
